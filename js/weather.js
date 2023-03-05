@@ -1,5 +1,3 @@
-// 현재 위치
-
 const API_KEY = "05367c9aa1824b7db1e4b3d8ad1c189b";
 
 function onGeoOk(position) {
@@ -20,4 +18,5 @@ function onGeoError() {
   alert("Can't find you. No weather for you");
 }
 
+// 현재 위치 불러오기
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
