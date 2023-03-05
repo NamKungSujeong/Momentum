@@ -18,7 +18,7 @@ function onLoginSubmit(e) {
 // 유저 네임 띄우기
 function paintGreetings(username) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `Hello, ${username}`;
 }
 
 // localStorage에 username 저장하기

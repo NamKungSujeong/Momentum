@@ -37,11 +37,6 @@ const quotes = [
     author: "에픽토테스",
   },
   {
-    quote:
-      "너무 소심하고 까다롭게 자신의 행동을 고민하지 말라. 모든 인생은 실험이다. 더 많이 실험할수록 더 나아진다.",
-    author: "랄프 왈도 에머슨",
-  },
-  {
     quote: " 오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.",
     author: "앙드레 말로",
   },
@@ -52,5 +47,5 @@ const author = document.querySelector("#quote span:last-child");
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-quote.innerText = todaysQuote.quote;
+quote.innerText = `"${todaysQuote.quote}"`;
 author.innerText = todaysQuote.author;

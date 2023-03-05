@@ -8,33 +8,37 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="block">
-      <form id="login-form" class="hidden">
-        <input
-          type="text"
-          placeholder="what is your name?"
-          required
-          maxlength="15"
-        />
-        <input type="submit" value="Log In" />
-      </form>
-      <h2 id="clock">00:00:00</h2>
-      <h1 id="greeting" class="hidden"></h1>
-      <form id="todo-form">
-        <input
-          type="text"
-          placeholder="Write a Todo and Press Enter"
-          required
-        />
-      </form>
-      <ul id="todo-list"></ul>
-      <div id="quote">
-        <span></span> -
-        <span></span>
-      </div>
-      <div id="weather">
-        <span></span>
-        <span></span>
+    <div class="box">
+      <div class="block">
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+        <div id="quote">
+          <span></span> -
+          <span></span>
+        </div>
+        <h2 id="clock">00:00:00</h2>
+        <form id="login-form" class="hidden">
+          <input
+            type="text"
+            placeholder="what is your name?"
+            required
+            maxlength="15"
+            id="nameInput"
+          />
+          <input type="submit" value="Log In" id="loginBtn" />
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+          <input
+            id="todoInput"
+            type="text"
+            placeholder="Write a Todo and Press Enter"
+            required
+          />
+        </form>
+        <ul id="todo-list"></ul>
       </div>
     </div>
 
