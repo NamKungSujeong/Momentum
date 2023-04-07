@@ -11,7 +11,7 @@ function saveTodos() {
 }
 
 function deleteTodo(e) {
-  const li = e.target.parentElement;
+  const li = e.target.parentElement.parentElement;
   li.remove();
   todos = todos.filter((todo) => todo.id !== parseInt(li.id));
   saveTodos();
@@ -19,14 +19,19 @@ function deleteTodo(e) {
 
 function paintTodo(newTodo) {
   const li = document.createElement("li");
-  li.id = newTodo.id;
-  const span = document.createElement("span");
-  span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "삭제";
+  const span = document.createElement("span");
+  const div = document.createElement("div");
+
+  li.setAttribute("draggable", "true");
+  div.setAttribute("class", "todo-detail");
+  li.id = newTodo.id;
+  span.innerText = newTodo.text;
+  button.innerText = "완료";
   button.addEventListener("click", deleteTodo);
-  li.appendChild(span);
-  li.appendChild(button);
+  div.appendChild(span);
+  div.appendChild(button);
+  li.appendChild(div);
   todoList.appendChild(li);
 }
 
